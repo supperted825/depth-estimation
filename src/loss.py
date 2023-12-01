@@ -7,7 +7,6 @@ Modified from https://github.com/vinceecws/Monodepth/
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
 from pytorch_msssim import ssim
 
 
@@ -16,9 +15,7 @@ class Loss(nn.Module):
     Loss module for supervised monocular depth estimation.
     """
 
-    def __init__(
-        self, edge_loss_weight=0.4, ssim_loss_weight=0.7, reg_loss_weight=0.5
-    ):
+    def __init__(self, edge_loss_weight=0.4, ssim_loss_weight=0.7, reg_loss_weight=0.5):
         super().__init__()
         self.edge_loss_weight = edge_loss_weight
         self.ssim_loss_weight = ssim_loss_weight

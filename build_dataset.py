@@ -2,7 +2,6 @@
 Script for extracting images and depths from the  original NYU Depth V2 .mat file.
 """
 
-
 import warnings
 
 import numpy as np
